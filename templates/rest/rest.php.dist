@@ -144,7 +144,6 @@ class HRestServer
 
             $login = $this->auth($user,$password);
 
-           var_dump($login);exit;
 
             if ($login  == false)
             {
@@ -211,6 +210,9 @@ class HRestServer
 
 
 }
+
+
+
 $rest =  new HRestServer();
 print $rest->run($_REQUEST);
 ?>
