@@ -2,6 +2,6 @@
 ;seu segredo aqui
 secret = "##$##444535#@@Udynioon"
 ;banco com a tabela SystemUser
-database = "permission"
+database = "sample"
 issuer = "indev.net.br"
-expired = "2 hours"
+expired = 3600

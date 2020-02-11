@@ -13,7 +13,7 @@ class HRestServer
     private $secret ;
     private $database ;
     private $issuer;
-    private $expired;
+    private $expired ;
 
 
     public function __construct()
@@ -41,8 +41,12 @@ class HRestServer
             if($users){
                
                 try{
+             
+                    $expired =   time() + $this->expired;
                     $token = Token::create($users->id, $this->secret, $expired, $this->issuer);
-                    return $token;
+                    
+                        var_dump($token);exit;
+                  //  return $token;
                 }catch(Exception $e){
                     
                         echo "Error: ".$e->getMessage()." File: ".$e->getFile();
@@ -207,9 +211,6 @@ class HRestServer
 
 
 }
-
-
-
 $rest =  new HRestServer();
 print $rest->run($_REQUEST);
 ?>

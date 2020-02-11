@@ -27,6 +27,6 @@ php adcconsole/console app:model:create Customer  --fields=nome,sobre --patch=te
  --pivot[=PIVOT] default $name+$agregate
 -a, --aggregate[=AGGREGATE]
 
-php adcconsole/console app:model:create Customer  --fields=nome,sobre --patch=teste  -a contacts 
+php adcconsole/console app:model:create Customer  --fields=nome,sobre --patch=app/models/teste  -a contacts 
 ```
 
