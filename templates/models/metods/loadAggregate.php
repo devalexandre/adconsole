@@ -1,0 +1,1 @@
+$this->$pai = parent::loadAggregate('$class', '$pivot', '$name_id', '$pai_id', $id);

@@ -1,0 +1,17 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: indev
+ * Date: 23/11/2018
+ * Time: 13:49
+ */
+
+class $class extends AdiantiRecordService
+{
+    const DATABASE      = '$database';
+    const ACTIVE_RECORD = '$model';
+
+     public function handle($params){
+     return json_encode(parent::handle($params));
+ }
+}

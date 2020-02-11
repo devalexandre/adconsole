@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+if(!file_exists('vendor/autoload.php')){
+    require_once dirname(__FILE__,4)."/autoload.php"; // vindo da raiz do projeto.
+}else {
+    require_once "vendor/autoload.php"; // vindo da raiz do projeto.
+}
+
+use App\Command\PhinxConsole;
+
+$application = new PhinxConsole();
+
+
+$application->run();

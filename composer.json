@@ -1,0 +1,40 @@
+{
+    "name": "indev/adcconsole",
+    "description": "Console for Adianti Framework Community Edition",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.3",
+    "authors": [
+        {
+            "name": "Alexandre Souza",
+            "email": "alexandre@indev.net.br",
+              "role": "Lead Developer"
+        }
+    ],
+      "support": {
+    "email": "team@indev.net.br"
+  },
+    "minimum-stability": "stable",
+
+    "autoload": {
+        "psr-4": {
+             "App\\Command\\": "src/",
+             "Indev\\AdConsole\\Test\\": "test/",
+             "Indev\\Command\\Bin\\": "bin/"
+
+        }
+    },
+    "require-dev": {
+        "php": ">=5.6",
+        "phpunit/phpunit": "^7",
+        "symfony/phpunit-bridge": "*"
+    },
+    "require": {
+        "symfony/console": "^4.3.4",
+        "robmorgan/phinx": "^0.11.0",
+        "rbdwllr/reallysimplejwt": "^2.1",
+        "ext-json": "*"
+    },
+    "bin": ["bin/adconsole",
+		"bin/adconsole.bat"]
+}

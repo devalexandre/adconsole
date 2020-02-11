@@ -1,0 +1,1 @@
+$this->$name = parent::loadComposite('$class', '$pai_id', $id);

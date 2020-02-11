@@ -1,0 +1,1 @@
+parent::deleteComposite('$class', '$pai_id', $id);

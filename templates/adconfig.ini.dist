@@ -1,0 +1,8 @@
+[database]
+host   =
+port   =
+name   = app/database/curso
+user   =
+pass   =
+adapter   = sqlite
+type = sqlite

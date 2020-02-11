@@ -1,0 +1,7 @@
+[rest]
+;seu segredo aqui
+secret = "##$##444535#@@Udynioon"
+;banco com a tabela SystemUser
+database = "permission"
+issuer = "indev.net.br"
+expired = "2 hours"

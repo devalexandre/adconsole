@@ -1,0 +1,1 @@
+parent::saveAggregate('$pivot', '$name_id', '$pai_id', $this->id, $this->$pai);

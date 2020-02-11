@@ -1,0 +1,55 @@
+<?php
+/**
+ * BootstrapFormBuilder
+* generate by adconsole 1.0.0
+ * @author: Indev Web www.dein.net.br
+ * @mail team@indev.net.b
+ */
+class $name extends TPage
+{
+    protected $form; // form
+    
+    // trait with onSave, onClear, onEdit
+    use Adianti\Base\AdiantiStandardFormTrait;
+    
+    /**
+     * Class constructor
+     * Creates the page and the registration form
+     */
+    function __construct()
+    {
+        parent::__construct();
+        
+        $this->setDatabase('$database');    // defines the database
+        $this->setActiveRecord('$model');   // defines the active record
+        
+        // creates the form
+        $this->form = new BootstrapFormBuilder('$name');
+        $this->form->setFormTitle('');
+        
+        // create the form fields
+        $id   = new TEntry('id');
+
+          $fields
+
+        $id->setEditable(FALSE);
+        
+        // add the form fields
+        $this->form->addFields( [new TLabel('ID')], [$id] );
+ 
+        $lform
+       
+        // define the form action
+        $this->form->addAction('Save', new TAction(array($this, 'onSave')), 'fa:save green');
+        $this->form->addAction('Clear',  new TAction(array($this, 'onClear')), 'fa:eraser red');
+    //    $this->form->addActionLink('Listing',  new TAction(array('StandardDataGridView', 'onReload')), 'fa:table blue');
+
+        // wrap the page content using vertical box
+        $vbox = new TVBox;
+        $vbox->style = 'width: 100%';
+    //    $vbox->add(new TXMLBreadCrumb('menu.xml', __CLASS__));
+        $vbox->add($this->form);
+
+        parent::add($vbox);
+    }
+}

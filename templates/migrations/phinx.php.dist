@@ -1,0 +1,43 @@
+<?php
+// read configurations
+$ini = parse_ini_file('app/config/adconfig.ini', true);
+
+return
+    [
+        'paths' => [
+            'migrations' => 'app/database/db/migrations',
+            'seeds' => 'app/database/db/seeds'
+        ],
+        'environments' => [
+            'default_migration_table' => 'phinxlog',
+            'default_database' => 'development',
+            'production' => [
+                'adapter' => $ini['database']['adapter'],
+                'host' => $ini['database']['host'],
+                'name' => $ini['database']['name'],
+                'user' => $ini['database']['user'],
+                'pass' => $ini['database']['pass'],
+                'port' => $ini['database']['port'],
+                'charset' => 'utf8',
+            ],
+            'development' => [
+                'adapter' => $ini['database']['adapter'],
+                'host' => $ini['database']['host'],
+                'name' => $ini['database']['name'],
+                'user' => $ini['database']['user'],
+                'pass' => $ini['database']['pass'],
+                'port' => $ini['database']['port'],
+                'charset' => 'utf8',
+            ],
+            'testing' => [
+                'adapter' => 'mysql',
+                'host' => 'localhost',
+                'name' => 'testing_db',
+                'user' => 'root',
+                'pass' => '',
+                'port' => '3306',
+                'charset' => 'utf8',
+            ]
+        ],
+        'version_order' => 'creation'
+    ];

@@ -1,0 +1,1 @@
+parent::saveComposite('$class', '$pai_id', $this->id, $this->$name);
