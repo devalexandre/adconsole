@@ -45,8 +45,7 @@ class HRestServer
                     $expired =   time() + $this->expired;
                     $token = Token::create($users->id, $this->secret, $expired, $this->issuer);
                     
-                        var_dump($token);exit;
-                  //  return $token;
+                    return $token;
                 }catch(Exception $e){
                     
                         echo "Error: ".$e->getMessage()." File: ".$e->getFile();
