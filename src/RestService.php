@@ -50,14 +50,14 @@ class RestService extends Command
             $contents = str_replace('$database',$database,$contents);
 
 
-            if (file_put_contents('app/service/' . $name . '.class.php', $contents) === false) {
+            if (file_put_contents('app/service/' . $name.'Service.class.php', $contents) === false) {
                 throw new RuntimeException(sprintf(
                     'The file "%s"  already exists',
-                    'app/service/' . $name . 'class.php'
+                    'app/service/' . $name.'Service.class.php'
                 ));
             }
 
-            $output->writeln("<info>created</info> app/service/{$name}.class.php'");
+            $output->writeln("<info>created</info> app/service/{$name}Service.class.php'");
         }
 
 
