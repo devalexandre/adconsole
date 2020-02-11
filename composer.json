@@ -3,7 +3,7 @@
     "description": "Console for Adianti Framework Community Edition",
     "type": "library",
     "license": "MIT",
-    "version": "stable",
+    "version": "1.0.4",
     "authors": [
         {
             "name": "Alexandre Souza",
